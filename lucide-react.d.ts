@@ -1,7 +1,7 @@
 declare module "lucide-react" {
-  import type { SVGProps } from "react";
+  import type { ReactElement, SVGProps } from "react";
 
-  export type LucideIcon = (props: SVGProps<SVGSVGElement> & { className?: string }) => JSX.Element;
+  export type LucideIcon = (props: SVGProps<SVGSVGElement> & { className?: string }) => ReactElement;
 
   export const Activity: LucideIcon;
   export const ArrowDownRight: LucideIcon;

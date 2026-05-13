@@ -13,7 +13,7 @@ import {
   Sparkles,
   Waves
 } from "lucide-react";
-import type { MouseEvent } from "react";
+import type { MouseEvent, ReactElement } from "react";
 import { ProjectVisual } from "./ProjectVisual";
 import { TelemetryGraph } from "./TelemetryGraph";
 
@@ -32,7 +32,7 @@ type Project = {
   telemetry: number[];
 };
 
-const iconMap: Record<string, (props: { className?: string }) => JSX.Element> = {
+const iconMap: Record<string, (props: { className?: string }) => ReactElement> = {
   Crosshair,
   DatabaseZap,
   FlaskConical,
