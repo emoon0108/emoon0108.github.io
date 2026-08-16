@@ -20,6 +20,7 @@ import { TelemetryGraph } from "./TelemetryGraph";
 type Project = {
   name: string;
   tag: string;
+  scope: string;
   status: string;
   summary: string;
   signal: string;
@@ -30,6 +31,8 @@ type Project = {
   visual: string;
   accent: string;
   telemetry: number[];
+  codeUrl?: string;
+  liveUrl?: string;
 };
 
 const iconMap: Record<string, (props: { className?: string }) => ReactElement> = {
@@ -90,6 +93,9 @@ export function ProjectExhibit({ project, index }: { project: Project; index: nu
               <span className={`h-1.5 w-1.5 rounded-full ${isViolet ? "bg-violet" : "bg-cyan"}`} />
               {project.tag}
             </div>
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.22em] text-cyan/70">
+              {project.scope}
+            </p>
             <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">{project.name}</h3>
           </div>
           <div className={`rounded-2xl border border-white/10 p-3 ${isViolet ? "bg-violet/10 text-violet" : "bg-cyan/10 text-cyan"}`}>
@@ -134,11 +140,39 @@ export function ProjectExhibit({ project, index }: { project: Project; index: nu
             <SignalHigh className="h-4 w-4" />
             {project.status}
           </div>
-          <div className="flex items-center gap-2 text-xs text-white/45 transition group-hover:text-white">
-            <Layers3 className="h-4 w-4" />
-            Inspect
-            <ArrowUpRight className="h-4 w-4" />
-          </div>
+          {project.codeUrl || project.liveUrl ? (
+            <div className="flex items-center gap-3 text-xs">
+              {project.codeUrl ? (
+                <a
+                  href={project.codeUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-white/55 transition hover:text-cyan"
+                  aria-label={`View ${project.name} source code`}
+                >
+                  Code
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              ) : null}
+              {project.liveUrl ? (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-white/55 transition hover:text-violet"
+                  aria-label={`View ${project.name} project`}
+                >
+                  {project.liveUrl.endsWith(".pdf") ? "Research" : "Live"}
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              ) : null}
+            </div>
+          ) : (
+            <div className="flex items-center gap-2 text-xs text-white/45">
+              <Layers3 className="h-4 w-4" />
+              Private work
+            </div>
+          )}
         </div>
 
         <div className="pointer-events-none absolute bottom-5 right-5 opacity-20 transition group-hover:opacity-50">

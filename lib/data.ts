@@ -3,83 +3,89 @@ import {
   BrainCircuit,
   CircuitBoard,
   Cpu,
-  Crosshair,
-  DatabaseZap,
-  FlaskConical,
-  Guitar,
   Radar,
   Rocket,
   ScanEye,
-  Sparkles,
-  Waves
 } from "lucide-react";
 
 export const navItems = ["About", "Projects", "Research", "Skills", "Timeline", "Contact"];
 
 export const projects = [
   {
-    name: "TacticalVision AI",
-    tag: "Spatial Intelligence Platform",
-    status: "Vision engine online",
+    name: "NoSpoilers",
+    tag: "Collaborative Product Engineering",
+    scope: "Public product",
+    status: "Live product",
     summary:
-      "Computer-vision tactical analysis that turns soccer footage into pitch control, off-ball value, compactness, transition efficiency, and recruiter-ready scouting reports.",
-    signal: "Pitch Control",
-    metric: "0.87",
-    pulse: "+18% threat suppression",
-    tech: ["Python", "CV", "Geometry", "Simulation", "Web Prototype"],
-    icon: "Crosshair",
+      "Full-stack movie discovery platform with personalized recommendations, social features, creator uploads, and a companion spoiler-blocking browser extension.",
+    signal: "Product Surface",
+    metric: "Web + Extension",
+    pulse: "Collaborative build",
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Playwright"],
+    icon: "Sparkles",
     visual: "field",
     accent: "cyan",
-    telemetry: [28, 34, 31, 48, 42, 58, 54, 68, 63, 77, 72, 84]
+    telemetry: [28, 34, 31, 48, 42, 58, 54, 68, 63, 77, 72, 84],
+    codeUrl: "https://github.com/BoatingToast/nospoilers",
+    liveUrl: "https://nospoilers-blush.vercel.app/"
   },
   {
     name: "Bioprint Digital Twin",
     tag: "Computational Biofabrication",
-    status: "Residual monitor armed",
+    scope: "Research work",
+    status: "Active research",
     summary:
       "Physics-guided extrusion bioprinting twin with CFD surrogate hooks, filament-width prediction, live stream monitoring, and Isolation Forest anomaly detection.",
-    signal: "Continuity Score",
-    metric: "94.2%",
-    pulse: "12 residual features",
+    signal: "Research Stack",
+    metric: "CFD + CV",
+    pulse: "Closed-loop monitoring",
     tech: ["Python", "CFD", "Streamlit", "scikit-learn", "OpenFOAM"],
     icon: "FlaskConical",
     visual: "fluid",
     accent: "violet",
-    telemetry: [18, 22, 30, 29, 42, 45, 52, 49, 63, 68, 71, 78]
+    telemetry: [18, 22, 30, 29, 42, 45, 52, 49, 63, 68, 71, 78],
+    liveUrl: "/Ethan_Moon_CV.pdf"
   },
   {
     name: "ViolinTwin",
     tag: "Adaptive AI Music Coach",
+    scope: "Public prototype",
     status: "Realtime tuner linked",
     summary:
       "React Native practice teacher that records real sessions, estimates pitch center, compares notes to MusicXML/MIDI targets, and builds a longitudinal digital twin of a player.",
-    signal: "Intonation Drift",
-    metric: "-7c",
-    pulse: "Fix Now loop active",
+    signal: "Analysis Loop",
+    metric: "Audio → Action",
+    pulse: "Native + TS paths",
     tech: ["Expo", "React Native", "DSP", "TypeScript", "Native Bridge"],
     icon: "Guitar",
     visual: "waveform",
     accent: "cyan",
-    telemetry: [41, 36, 44, 39, 50, 47, 58, 52, 63, 61, 70, 66]
+    telemetry: [41, 36, 44, 39, 50, 47, 58, 52, 63, 61, 70, 66],
+    codeUrl: "https://github.com/emoon0108/ViolinTwin",
+    liveUrl: "https://emoon0108.github.io/ViolinTwin/"
   },
   {
-    name: "Violin Digital Twin Lab",
-    tag: "Acoustic + CFD Research Bench",
-    status: "Twin snapshot synced",
+    name: "Referral Intelligence",
+    tag: "Analytics + Decision Support",
+    scope: "Public prototype",
+    status: "Live dashboard",
     summary:
-      "A computational craftsmanship lab combining vision-derived geometry, microphone features, mock or real OpenFOAM outputs, JSON twins, and anomaly scoring.",
-    signal: "Resonance Peaks",
-    metric: "6",
-    pulse: "Geometry/audio/CFD fused",
-    tech: ["OpenCV", "Audio Analysis", "OpenFOAM", "ML", "Streamlit"],
-    icon: "Waves",
+      "Referral analytics workspace with deterministic demo data, real CSV ingestion, funnel and unit-economics modeling, segmentation, and an executive reporting view.",
+    signal: "Automated Tests",
+    metric: "7 passing",
+    pulse: "No runtime dependencies",
+    tech: ["JavaScript", "Analytics", "CSV", "Unit Economics", "Node Test"],
+    icon: "DatabaseZap",
     visual: "twin",
     accent: "violet",
-    telemetry: [24, 42, 27, 48, 35, 61, 39, 66, 44, 72, 51, 80]
+    telemetry: [24, 42, 27, 48, 35, 61, 39, 66, 44, 72, 51, 80],
+    codeUrl: "https://github.com/emoon0108/sportlingo-referral-dashboard",
+    liveUrl: "https://emoon0108.github.io/sportlingo-referral-dashboard/"
   },
   {
     name: "Healthy Eaters",
     tag: "Human-Centered Assistive System",
+    scope: "Public prototype",
     status: "Low-stim mode stable",
     summary:
       "Defold/Lua prototype for autism-aware nutrition exposure with simulated smart-plate tracking, sensory modes, food challenges, tokenized games, and parent insights.",
@@ -90,12 +96,15 @@ export const projects = [
     icon: "Sparkles",
     visual: "health",
     accent: "cyan",
-    telemetry: [20, 24, 32, 38, 41, 45, 55, 57, 62, 70, 73, 82]
+    telemetry: [20, 24, 32, 38, 41, 45, 55, 57, 62, 70, 73, 82],
+    codeUrl: "https://github.com/emoon0108/HealthyEaters",
+    liveUrl: "https://emoon0108.github.io/HealthyEaters/"
   },
   {
     name: "Academic Planner",
     tag: "AI Planning Workspace",
-    status: "Scenario graph loaded",
+    scope: "In progress",
+    status: "Private build",
     summary:
       "Full-stack planning system with dashboards, chat, career pathways, scenario modeling, typed APIs, database schema work, and modern product UI primitives.",
     signal: "Plan States",

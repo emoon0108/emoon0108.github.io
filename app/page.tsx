@@ -7,9 +7,7 @@ import {
   MapPin,
   Orbit,
   Send,
-  Sparkles,
   Terminal,
-  Zap,
   Code2,
   Brain,
   Rocket,
@@ -20,8 +18,7 @@ import {
   GitBranch,
   Layers3,
   Network,
-  AudioWaveform,
-  Phone
+  AudioWaveform
 } from "lucide-react";
 import { CustomCursor } from "@/components/CustomCursor";
 import { HeroPortrait } from "@/components/HeroPortrait";
@@ -97,7 +94,8 @@ export default function Home() {
             </span>
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-            Engineer building intelligent systems across AI, simulation, robotics, and computational modeling.
+            Incoming University of Michigan engineering student building applied AI, simulation,
+            digital twins, and realtime product systems.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <a
@@ -284,10 +282,6 @@ export default function Home() {
                 <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2">
                   <Mail className="h-4 w-4 text-cyan" />
                   emoon0108@gmail.com
-                </span>
-                <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2">
-                  <Phone className="h-4 w-4 text-violet" />
-                  616-295-5694
                 </span>
                 <a href="https://linkedin.com/in/ethan-moon-b9a2a7314" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 transition hover:border-cyan/35 hover:text-white">
                   <Linkedin className="h-4 w-4 text-cyan" />

@@ -1,0 +1,44 @@
+# Ethan Moon — Engineering Portfolio
+
+The source for [emoon0108.github.io](https://emoon0108.github.io/), a static portfolio focused on applied AI, digital twins, simulation, and product engineering.
+
+## What the site demonstrates
+
+- Recruiter-oriented project summaries with honest public, private, and in-progress labels
+- Direct links to live demos and source repositories where available
+- Research and engineering timeline spanning bioprinting, aerospace, sensing, and software
+- Responsive, accessible presentation built as a static export for GitHub Pages
+
+## Stack
+
+- Next.js 15 and React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- GitHub Actions and GitHub Pages
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Production check
+
+```bash
+npm run check
+```
+
+The check lints the source and produces a static site in `out/`. Pushes to `main` are verified and deployed by [the Pages workflow](.github/workflows/deploy.yml).
+
+## Featured public work
+
+| Project | Code | Demo |
+| --- | --- | --- |
+| NoSpoilers | [Repository](https://github.com/BoatingToast/nospoilers) | [Live product](https://nospoilers-blush.vercel.app/) |
+| ViolinTwin | [Repository](https://github.com/emoon0108/ViolinTwin) | [Project page](https://emoon0108.github.io/ViolinTwin/) |
+| Healthy Eaters | [Repository](https://github.com/emoon0108/HealthyEaters) | [Project page](https://emoon0108.github.io/HealthyEaters/) |
+| Referral Intelligence | [Repository](https://github.com/emoon0108/sportlingo-referral-dashboard) | [Live dashboard](https://emoon0108.github.io/sportlingo-referral-dashboard/) |
