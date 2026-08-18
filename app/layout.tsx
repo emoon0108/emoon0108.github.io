@@ -3,13 +3,13 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://emoon0108.github.io"),
-  title: "Ethan Moon | Software & Applied AI Engineering",
+  title: "Ethan Moon — Applied AI & Physical Systems",
   description:
-    "Portfolio of Ethan Moon, an incoming University of Michigan engineering student building applied AI, simulation, digital twins, and realtime product systems.",
+    "Ethan Moon engineers intelligent products across applied AI, digital twins, simulation, sensing, and realtime systems.",
   openGraph: {
-    title: "Ethan Moon | Software & Applied AI Engineering",
+    title: "Ethan Moon — Applied AI & Physical Systems",
     description:
-      "Applied AI, digital twins, simulation, and realtime product engineering.",
+      "Intelligent products across applied AI, digital twins, simulation, sensing, and realtime systems.",
     url: "https://emoon0108.github.io/",
     siteName: "Ethan Moon",
     type: "website"
