@@ -51,3 +51,7 @@ python scripts/build-career-documents.py
 | ViolinTwin | [Repository](https://github.com/emoon0108/ViolinTwin) | [Project page](https://emoon0108.github.io/ViolinTwin/) |
 | Healthy Eaters | [Repository](https://github.com/emoon0108/HealthyEaters) | [Project page](https://emoon0108.github.io/HealthyEaters/) |
 | Referral Intelligence | [Repository](https://github.com/emoon0108/sportlingo-referral-dashboard) | [Live dashboard](https://emoon0108.github.io/sportlingo-referral-dashboard/) |
+
+## License
+
+Original source code is available under the [MIT License](LICENSE). Personal documents, portrait photography, fonts, and third-party material are excluded as described in [ASSET-LICENSE.md](ASSET-LICENSE.md).
