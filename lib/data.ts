@@ -101,20 +101,21 @@ export const projects = [
     liveUrl: "https://emoon0108.github.io/HealthyEaters/"
   },
   {
-    name: "Academic Planner",
-    tag: "AI Planning Workspace",
-    scope: "In progress",
-    status: "Private build",
+    name: "AcademiQ",
+    tag: "Constraint-Aware Degree Planning",
+    scope: "Public source",
+    status: "43 tests passing",
     summary:
-      "Full-stack planning system with dashboards, chat, career pathways, scenario modeling, typed APIs, database schema work, and modern product UI primitives.",
-    signal: "Plan States",
-    metric: "∞",
-    pulse: "TRPC + Drizzle stack",
+      "Full-stack degree planner that models prerequisites, compares alternate schedules, surfaces registration conflicts, and runs locally with a credential-free demo dataset.",
+    signal: "Verified Checks",
+    metric: "43",
+    pulse: "Credential-free demo mode",
     tech: ["React", "tRPC", "Drizzle", "MySQL", "Framer Motion"],
     icon: "DatabaseZap",
     visual: "network",
     accent: "violet",
-    telemetry: [33, 31, 39, 45, 44, 55, 52, 64, 61, 69, 74, 79]
+    telemetry: [33, 31, 39, 45, 44, 55, 52, 64, 61, 69, 74, 79],
+    codeUrl: "https://github.com/emoon0108/academic-planner"
   }
 ];
 
