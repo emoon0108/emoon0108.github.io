@@ -11,7 +11,7 @@ The source for [emoon0108.github.io](https://emoon0108.github.io/), a static por
 
 ## Stack
 
-- Next.js 15 and React 19
+- Next.js 16 and React 19
 - TypeScript
 - Tailwind CSS
 - Framer Motion
@@ -32,7 +32,16 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run check
 ```
 
-The check lints the source and produces a static site in `out/`. Pushes to `main` are verified and deployed by [the Pages workflow](.github/workflows/deploy.yml).
+The check lints the source, runs content-integrity tests, and produces a static site in `out/`. Pull requests are verified by [CI](.github/workflows/ci.yml); pushes to `main` are verified and deployed by [the Pages workflow](.github/workflows/deploy.yml).
+
+## Career documents
+
+The public résumé and CV are generated from [`scripts/build-career-documents.py`](scripts/build-career-documents.py), keeping the source reviewable and preventing stale or private information from slipping into an export.
+
+```bash
+python -m pip install reportlab
+python scripts/build-career-documents.py
+```
 
 ## Featured public work
 

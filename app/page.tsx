@@ -58,7 +58,7 @@ export default function Home() {
         </div>
         <div className="profile-grid">
           <div className="profile-intro">
-            <p className="eyebrow">Builder / researcher / incoming Wolverine</p>
+            <p className="eyebrow">Builder / researcher / Michigan engineer</p>
             <h2>
               I make complex systems
               <em>feel observable.</em>
@@ -66,7 +66,7 @@ export default function Home() {
           </div>
           <div className="profile-copy">
             <p className="profile-lead">
-              I&apos;m Ethan Moon, an incoming University of Michigan engineering student.
+              I&apos;m Ethan Moon, a University of Michigan computer science engineering student.
               My work sits where software meets the physical world: acoustic signals,
               fluid dynamics, human behavior, live data, and AI-assisted decisions.
             </p>
@@ -128,12 +128,12 @@ export default function Home() {
         </div>
         <p className="contact-overline">Open to research, engineering, and ambitious collaborations.</p>
         <h2>Have a hard problem?</h2>
-        <a className="contact-email" href="mailto:emoon0108@gmail.com">
+        <a className="contact-email" href="mailto:ethmoon@umich.edu">
           <span>Let&apos;s talk.</span>
           <ArrowRight aria-hidden="true" />
         </a>
         <div className="contact-meta">
-          <a href="mailto:emoon0108@gmail.com"><Mail aria-hidden="true" /> Email</a>
+          <a href="mailto:ethmoon@umich.edu"><Mail aria-hidden="true" /> Email</a>
           <a href="https://github.com/emoon0108" target="_blank" rel="noreferrer"><Github aria-hidden="true" /> GitHub</a>
           <a href="https://linkedin.com/in/ethan-moon-b9a2a7314" target="_blank" rel="noreferrer"><Linkedin aria-hidden="true" /> LinkedIn</a>
           <span>Grand Rapids, Michigan</span>

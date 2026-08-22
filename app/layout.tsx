@@ -5,14 +5,23 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://emoon0108.github.io"),
   title: "Ethan Moon — Applied AI & Physical Systems",
   description:
-    "Ethan Moon engineers intelligent products across applied AI, digital twins, simulation, sensing, and realtime systems.",
+    "Ethan Moon is a University of Michigan computer science student engineering products across applied AI, digital twins, simulation, sensing, and real-time systems.",
+  alternates: {
+    canonical: "/"
+  },
   openGraph: {
     title: "Ethan Moon — Applied AI & Physical Systems",
     description:
-      "Intelligent products across applied AI, digital twins, simulation, sensing, and realtime systems.",
+      "University of Michigan computer science student building intelligent products across applied AI, digital twins, simulation, sensing, and real-time systems.",
     url: "https://emoon0108.github.io/",
     siteName: "Ethan Moon",
     type: "website"
+  },
+  twitter: {
+    card: "summary",
+    title: "Ethan Moon — Applied AI & Physical Systems",
+    description:
+      "University of Michigan computer science student building intelligent products across software and the physical world."
   },
   robots: {
     index: true,

@@ -158,8 +158,8 @@ export const skillGroups = [
 export const timeline = [
   {
     year: "2026",
-    title: "Incoming Engineering Student, University of Michigan",
-    body: "Admitted to the University of Michigan College of Engineering after building a portfolio across AI, simulation, aerospace, bioprinting, and product engineering."
+    title: "Computer Science, University of Michigan",
+    body: "Pursuing a B.S.E. in Computer Science at the College of Engineering after building a portfolio across AI, simulation, aerospace, bioprinting, and product engineering."
   },
   {
     year: "Oct 2025 - Present",
