@@ -1,5 +1,21 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
+
+const bricolage = localFont({
+  src: "./fonts/BricolageGrotesque.ttf",
+  variable: "--font-bricolage",
+  display: "swap"
+});
+
+const instrument = localFont({
+  src: [
+    { path: "./fonts/InstrumentSerif-Regular.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/InstrumentSerif-Italic.ttf", weight: "400", style: "italic" }
+  ],
+  variable: "--font-instrument",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://emoon0108.github.io"),
@@ -36,7 +52,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className={`${bricolage.variable} ${instrument.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

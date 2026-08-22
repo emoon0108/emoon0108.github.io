@@ -126,8 +126,8 @@ export default function Home() {
         <div className="contact-orbit" aria-hidden="true">
           <span>LET&apos;S BUILD SOMETHING REAL · LET&apos;S BUILD SOMETHING REAL · </span>
         </div>
-        <p className="contact-overline">Open to research, engineering, and ambitious collaborations.</p>
-        <h2>Have a hard problem?</h2>
+        <p className="contact-overline">Open to research, software engineering, and physical-computing teams.</p>
+        <h2>Need the model to touch reality?</h2>
         <a className="contact-email" href="mailto:ethmoon@umich.edu">
           <span>Let&apos;s talk.</span>
           <ArrowRight aria-hidden="true" />

@@ -31,7 +31,7 @@ body {
   overflow-x: hidden;
   background: var(--ink);
   color: var(--paper);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-bricolage), sans-serif;
 }
 
 button,
@@ -500,7 +500,7 @@ button {
 
 .work-title-row h2 em {
   color: transparent;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-instrument), serif;
   font-weight: 400;
   -webkit-text-stroke: 1.3px var(--paper);
 }
@@ -590,7 +590,7 @@ button {
   z-index: 8;
   top: 18px;
   left: 20px;
-  font-family: monospace;
+  font-family: var(--font-bricolage), sans-serif;
   font-size: 9px;
   letter-spacing: 0.18em;
 }
@@ -990,7 +990,7 @@ button {
 .dark-kicker { border-color: rgba(17,16,15,.3); }
 .profile-grid { position: relative; display: grid; grid-template-columns: 1.18fr .82fr; gap: 8vw; padding: 100px 0 130px; }
 .profile-intro h2 { max-width: 9ch; margin: 0; font-size: clamp(58px, 8vw, 132px); line-height: .86; letter-spacing: -.075em; }
-.profile-intro h2 em { display: block; color: var(--orange); font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+.profile-intro h2 em { display: block; color: var(--orange); font-family: var(--font-instrument), serif; font-weight: 400; }
 .profile-copy { position: relative; z-index: 2; align-self: end; }
 .profile-copy > p { max-width: 620px; margin: 0 0 22px; font-size: 16px; line-height: 1.65; }
 .profile-copy .profile-lead { font-size: clamp(20px, 2vw, 31px); font-weight: 700; line-height: 1.35; letter-spacing: -.035em; }
@@ -1002,7 +1002,7 @@ button {
 .capability-grid { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(17,16,15,.35); border-bottom: 1px solid rgba(17,16,15,.35); }
 .capability { min-height: 280px; padding: 25px; border-right: 1px solid rgba(17,16,15,.35); }
 .capability:last-child { border-right: 0; }
-.capability-number { font-family: Georgia, serif; font-size: 14px; font-style: italic; }
+.capability-number { font-family: var(--font-instrument), serif; font-size: 16px; font-style: italic; }
 .capability h3 { margin: 80px 0 18px; font-size: clamp(22px, 2vw, 31px); letter-spacing: -.04em; }
 .capability p { margin: 0; font-size: 13px; line-height: 1.65; }
 
@@ -1012,7 +1012,7 @@ button {
 .timeline-list { border-top: 1px solid rgba(240,236,223,.5); }
 .timeline-row { display: grid; grid-template-columns: 72px 180px 1fr 40px; gap: 24px; align-items: start; padding: 32px 0; border-bottom: 1px solid rgba(240,236,223,.35); }
 .timeline-row time, .timeline-index { padding-top: 4px; font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
-.timeline-index { font-family: Georgia, serif; font-style: italic; opacity: .6; }
+.timeline-index { font-family: var(--font-instrument), serif; font-style: italic; opacity: .6; }
 .timeline-row h3 { margin: 0 0 13px; font-size: clamp(23px, 2.6vw, 42px); line-height: 1; letter-spacing: -.045em; }
 .timeline-row p { max-width: 850px; margin: 0; color: rgba(240,236,223,.72); font-size: 14px; line-height: 1.6; }
 .timeline-mark { font-size: 24px; transition: transform 180ms ease; }
@@ -1023,7 +1023,7 @@ button {
 .contact-overline, .contact-section h2, .contact-email, .contact-meta { position: relative; z-index: 2; }
 .contact-overline { margin: 0 0 28px; font-size: 11px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
 .contact-section h2 { margin: 0; font-size: clamp(65px, 12vw, 196px); line-height: .8; letter-spacing: -.085em; }
-.contact-email { display: inline-flex; align-items: center; gap: 28px; margin-top: 45px; padding-bottom: 8px; border-bottom: 5px solid var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: clamp(46px, 8vw, 128px); font-style: italic; line-height: 1; }
+.contact-email { display: inline-flex; align-items: center; gap: 28px; margin-top: 45px; padding-bottom: 8px; border-bottom: 5px solid var(--ink); font-family: var(--font-instrument), serif; font-size: clamp(46px, 8vw, 128px); font-style: italic; line-height: 1; }
 .contact-email svg { width: .75em; height: .75em; transition: transform 220ms ease; }
 .contact-email:hover svg { transform: translateX(12px); }
 .contact-orbit { position: absolute; z-index: 1; top: 6%; left: 50%; width: 72vw; max-width: 1050px; aspect-ratio: 1; border: 1px solid rgba(17,16,15,.55); border-radius: 50%; transform: translateX(-50%) rotate(-8deg); animation: contactRing 8s ease-in-out infinite; }

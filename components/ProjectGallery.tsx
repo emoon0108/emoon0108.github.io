@@ -17,8 +17,8 @@ export function ProjectGallery() {
       <div className="work-title-row">
         <h2>PROJECT<br /><em>WORLDS</em></h2>
         <p>
-          Not a grid of thumbnails. Each project gets its own visual logic,
-          interface language, and reason to exist.
+          Each chapter exposes the signal, the engineering decision,
+          and the proof that the system works.
         </p>
       </div>
 

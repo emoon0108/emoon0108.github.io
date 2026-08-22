@@ -11,7 +11,7 @@ export function KineticHero() {
     <section className={`hero ${warped ? "is-warped" : ""}`} aria-labelledby="hero-title">
       <div className="hero-meta">
         <span>Applied AI + Physical Systems</span>
-        <span className="available"><i /> Available for ambitious work</span>
+        <span className="available"><i /> Seeking 2026 research + software roles</span>
       </div>
 
       <div className="hero-type" id="hero-title" aria-label="Ethan Moon">
@@ -58,8 +58,8 @@ export function KineticHero() {
 
       <div className="hero-bottom">
         <p>
-          I engineer intelligent products that can see, simulate, listen,
-          and respond to the real world.
+          I build software around measurable signals: audio, flow, behavior,
+          and live operational data.
         </p>
         <a href="#work" className="scroll-link">
           Selected work <ArrowDownRight aria-hidden="true" />
