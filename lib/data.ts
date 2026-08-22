@@ -72,7 +72,7 @@ export const projects = [
     summary:
       "Referral analytics workspace with deterministic demo data, real CSV ingestion, funnel and unit-economics modeling, segmentation, and an executive reporting view.",
     signal: "Automated Tests",
-    metric: "7 passing",
+    metric: "9 passing",
     pulse: "No runtime dependencies",
     tech: ["JavaScript", "Analytics", "CSV", "Unit Economics", "Node Test"],
     icon: "DatabaseZap",

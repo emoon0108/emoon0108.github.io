@@ -28,7 +28,7 @@ const personJsonLd = {
     "https://github.com/emoon0108",
     "https://www.linkedin.com/in/ethan-moon-b9a2a7314/"
   ],
-  alumniOf: {
+  affiliation: {
     "@type": "CollegeOrUniversity",
     name: "University of Michigan"
   },
