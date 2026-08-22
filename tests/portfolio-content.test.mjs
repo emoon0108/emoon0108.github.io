@@ -5,14 +5,18 @@ import test from "node:test";
 const readText = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 
 test("portfolio uses current professional identity and contact links", async () => {
-  const [page, timeline] = await Promise.all([
+  const [page, timeline, layout] = await Promise.all([
     readText("app/page.tsx"),
     readText("lib/data.ts"),
+    readText("app/layout.tsx"),
   ]);
 
   assert.match(page, /University of Michigan computer science engineering student/);
   assert.match(page, /mailto:ethmoon@umich\.edu/);
   assert.match(page, /linkedin\.com\/in\/ethan-moon-b9a2a7314/);
+  assert.match(layout, /application\/ld\+json/);
+  assert.match(layout, /schema\.org/);
+  assert.match(layout, /Portrait of Ethan Moon/);
   assert.doesNotMatch(`${page}\n${timeline}`, /incoming University of Michigan|incoming Wolverine/i);
 });
 
