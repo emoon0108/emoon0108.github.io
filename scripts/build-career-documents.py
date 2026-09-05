@@ -31,7 +31,8 @@ from reportlab.platypus import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC = ROOT / "public"
+# Legacy document drafts. The supplied current résumé in public/ must not be overwritten.
+PUBLIC = ROOT / "tmp" / "legacy-career-documents"
 NAVY = colors.HexColor("#102A43")
 BLUE = colors.HexColor("#0B6E99")
 INK = colors.HexColor("#17212B")

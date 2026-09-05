@@ -1,57 +1,34 @@
-# Ethan Moon — Engineering Portfolio
+# Ethan Moon’s stadium portfolio
 
-The source for [emoon0108.github.io](https://emoon0108.github.io/), a static portfolio focused on applied AI, digital twins, simulation, and product engineering.
+[Live portfolio](https://emoon0108.github.io/) — a playable soccer field inside an original Big House-inspired stadium. Nine project exhibits surround the pitch; stop 10 is About Me.
 
-## What the site demonstrates
+## Explore
 
-- Recruiter-oriented project summaries with honest public, private, and in-progress labels
-- Direct links to live demos and source repositories where available
-- Research and engineering timeline spanning bioprinting, aerospace, sensing, and software
-- Responsive, accessible presentation built as a static export for GitHub Pages
+- WASD or arrow keys move the ball relative to the camera. Space kicks; R resets.
+- Click the grass to move, drag to orbit, and scroll to zoom.
+- Select a numbered exhibit or use the Projects index. Each project has its own modeled object and an animation control.
+- Follow ball switches to a closer camera. Touch direction buttons and Kick support phones.
+- Less motion freezes the crowd, flags, and exhibit animations. The system reduced-motion preference is respected automatically.
+- List view exposes the same project descriptions, links, résumé, and experience without WebGL. It is also the no-JavaScript and print fallback.
 
-## Stack
+## Development
 
-- Next.js 16 and React 19
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- GitHub Actions and GitHub Pages
+Next.js 16, React 19, TypeScript, Three.js, and original CSS. All scenery and project objects are modeled procedurally in this repository; there are no downloaded stadium models.
 
-## Run locally
-
-```bash
-npm install
+```sh
+npm ci
 npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-## Production check
-
-```bash
 npm run check
 ```
 
-The check lints the source, runs content-integrity tests, and produces a static site in `out/`. Pull requests are verified by [CI](.github/workflows/ci.yml); pushes to `main` are verified and deployed by [the Pages workflow](.github/workflows/deploy.yml).
+`check` runs ESLint, content and ball-physics tests, and the static production build. GitHub Actions deploys `out/` to GitHub Pages on pushes to `main`.
 
-## Career documents
+The scene batches supporters into instanced meshes, caps rendering near 30 fps and pixel ratio at 1.5, reuses static shadows, and stops rendering while hidden. No audio plays automatically.
 
-The public résumé and CV are generated from [`scripts/build-career-documents.py`](scripts/build-career-documents.py), keeping the source reviewable and preventing stale or private information from slipping into an export.
+## Content and references
 
-```bash
-python -m pip install reportlab
-python scripts/build-career-documents.py
-```
+Project descriptions were checked against the supplied résumé, GitHub repositories, and LinkedIn. Sources and visual references are recorded in [docs/design-notes.md](docs/design-notes.md).
 
-## Featured public work
+`public/Ethan_Moon_Resume.pdf` is the exact supplied September 2026 résumé. The legacy career-document generator writes drafts only to ignored `tmp/legacy-career-documents/`; it cannot overwrite the current résumé.
 
-| Project | Code | Demo |
-| --- | --- | --- |
-| NoSpoilers | [Repository](https://github.com/BoatingToast/nospoilers) | [Live product](https://nospoilers-blush.vercel.app/) |
-| ViolinTwin | [Repository](https://github.com/emoon0108/ViolinTwin) | [Project page](https://emoon0108.github.io/ViolinTwin/) |
-| Healthy Eaters | [Repository](https://github.com/emoon0108/HealthyEaters) | [Project page](https://emoon0108.github.io/HealthyEaters/) |
-| Referral Intelligence | [Repository](https://github.com/emoon0108/sportlingo-referral-dashboard) | [Live dashboard](https://emoon0108.github.io/sportlingo-referral-dashboard/) |
-
-## License
-
-Original source code is available under the [MIT License](LICENSE). Personal documents, portrait photography, fonts, and third-party material are excluded as described in [ASSET-LICENSE.md](ASSET-LICENSE.md).
+Original code is available under [MIT](LICENSE). Personal documents and photography are covered separately by [ASSET-LICENSE.md](ASSET-LICENSE.md).

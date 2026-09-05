@@ -1,204 +1,82 @@
-import {
-  Activity,
-  BrainCircuit,
-  CircuitBoard,
-  Cpu,
-  Radar,
-  Rocket,
-  ScanEye,
-} from "lucide-react";
+export type ModelKind = 'cinema' | 'printer' | 'violin' | 'planner' | 'plate' | 'funnel' | 'store' | 'drone' | 'space';
+export type Project = {
+  id: string; name: string; category: string; year: string; kind: ModelKind;
+  color: string; object: string; summary: string; detail: string; note: string;
+  tech: string[]; codeUrl?: string; liveUrl?: string; linkLabel?: string;
+  action: string; actionDone: string;
+};
 
-export const navItems = ["About", "Projects", "Research", "Skills", "Timeline", "Contact"];
-
-export const projects = [
+export const projects: Project[] = [
   {
-    name: "NoSpoilers",
-    tag: "Collaborative Product Engineering",
-    scope: "Public product",
-    status: "Live product",
-    summary:
-      "Full-stack movie discovery platform with personalized recommendations, social features, creator uploads, and a companion spoiler-blocking browser extension.",
-    signal: "Product Surface",
-    metric: "Web + Extension",
-    pulse: "Collaborative build",
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Playwright"],
-    icon: "Sparkles",
-    visual: "field",
-    accent: "cyan",
-    telemetry: [28, 34, 31, 48, 42, 58, 54, 68, 63, 77, 72, 84],
-    codeUrl: "https://github.com/BoatingToast/nospoilers",
-    liveUrl: "https://nospoilers-blush.vercel.app/"
+    id: 'nospoilers', name: 'NoSpoilers', category: 'Co-built · Live product', year: '2026', kind: 'cinema', color: '#a65235', object: 'Film projector',
+    summary: 'Movie discovery, shared watchlists, and spoiler blocking.',
+    detail: 'I co-built a movie discovery platform with collaborative picks, Movie DNA profiles, watchlist syncing, and a browser extension that hides spoilers on-device. My work spans the database, APIs, and the screens people use.',
+    note: 'Launched to 80+ users. Built with a collaborator.', tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
+    codeUrl: 'https://github.com/BoatingToast/nospoilers', liveUrl: 'https://nospoilers.xyz', linkLabel: 'Visit NoSpoilers', action: 'Start projector', actionDone: 'Stop projector',
   },
   {
-    name: "Bioprint Digital Twin",
-    tag: "Computational Biofabrication",
-    scope: "Research work",
-    status: "Active research",
-    summary:
-      "Physics-guided extrusion bioprinting twin with CFD surrogate hooks, filament-width prediction, live stream monitoring, and Isolation Forest anomaly detection.",
-    signal: "Research Stack",
-    metric: "CFD + CV",
-    pulse: "Closed-loop monitoring",
-    tech: ["Python", "CFD", "Streamlit", "scikit-learn", "OpenFOAM"],
-    icon: "FlaskConical",
-    visual: "fluid",
-    accent: "violet",
-    telemetry: [18, 22, 30, 29, 42, 45, 52, 49, 63, 68, 71, 78],
-    liveUrl: "/Ethan_Moon_CV.pdf"
+    id: 'bioprinting', name: 'Bioprinting', category: 'Research · GVSU', year: '2025–26', kind: 'printer', color: '#3d6d66', object: 'An extrusion bioprinter',
+    summary: 'Simulation and monitoring for extrusion bioprinting.',
+    detail: 'I build non-Newtonian, multiphase OpenFOAM models of bioink deposition and tools for inspecting the results. The research connects fluid simulation, machine vision, and sensor feedback in a closed-loop bioprinting system.',
+    note: '32 deposition cases. Co-author on a peer-reviewed ASEE conference paper.', tech: ['OpenFOAM', 'Python', 'ParaView', 'Computer vision'],
+    liveUrl: '/Ethan_Moon_Resume.pdf', linkLabel: 'Research background', action: 'Start printer', actionDone: 'Pause printer',
   },
   {
-    name: "ViolinTwin",
-    tag: "Adaptive AI Music Coach",
-    scope: "Public prototype",
-    status: "Realtime tuner linked",
-    summary:
-      "React Native practice teacher that records real sessions, estimates pitch center, compares notes to MusicXML/MIDI targets, and builds a longitudinal digital twin of a player.",
-    signal: "Analysis Loop",
-    metric: "Audio → Action",
-    pulse: "Native + TS paths",
-    tech: ["Expo", "React Native", "DSP", "TypeScript", "Native Bridge"],
-    icon: "Guitar",
-    visual: "waveform",
-    accent: "cyan",
-    telemetry: [41, 36, 44, 39, 50, 47, 58, 52, 63, 61, 70, 66],
-    codeUrl: "https://github.com/emoon0108/ViolinTwin",
-    liveUrl: "https://emoon0108.github.io/ViolinTwin/"
+    id: 'violintwin', name: 'ViolinTwin', category: 'Independent · Prototype', year: '2026', kind: 'violin', color: '#a77538', object: 'A violin and its bow',
+    summary: 'Pitch and rhythm analysis for violin practice.',
+    detail: 'An Expo app that records practice, segments notes, and compares pitch and rhythm with scales or imported MusicXML/MIDI targets. The app identifies pitch and timing errors and provides slowed playback for repeated practice.',
+    note: 'On-device analysis. Native tuner bridge requires a custom development build.', tech: ['React Native', 'Expo', 'Audio DSP', 'TypeScript'],
+    codeUrl: 'https://github.com/emoon0108/ViolinTwin', liveUrl: 'https://emoon0108.github.io/ViolinTwin/', linkLabel: 'Project page', action: 'Move the bow', actionDone: 'Stop bow',
   },
   {
-    name: "Referral Intelligence",
-    tag: "Analytics + Decision Support",
-    scope: "Public prototype",
-    status: "Live dashboard",
-    summary:
-      "Referral analytics workspace with deterministic demo data, real CSV ingestion, funnel and unit-economics modeling, segmentation, and an executive reporting view.",
-    signal: "Automated Tests",
-    metric: "9 passing",
-    pulse: "No runtime dependencies",
-    tech: ["JavaScript", "Analytics", "CSV", "Unit Economics", "Node Test"],
-    icon: "DatabaseZap",
-    visual: "twin",
-    accent: "violet",
-    telemetry: [24, 42, 27, 48, 35, 61, 39, 66, 44, 72, 51, 80],
-    codeUrl: "https://github.com/emoon0108/sportlingo-referral-dashboard",
-    liveUrl: "https://emoon0108.github.io/sportlingo-referral-dashboard/"
+    id: 'academiq', name: 'AcademiQ', category: 'Independent · Open source', year: '2026', kind: 'planner', color: '#4e627d', object: 'Eight connected semesters',
+    summary: 'Degree planning with prerequisite and scheduling constraints.',
+    detail: 'I built a planning engine that compares fastest, lowest-stress, and most-flexible paths through eight semesters. Prerequisites, credit limits, course availability, and internship terms constrain every plan, with deterministic fallbacks for AI features.',
+    note: '43 unit and integration tests. Includes a local, credential-free demo.', tech: ['React', 'tRPC', 'Drizzle', 'MySQL'],
+    codeUrl: 'https://github.com/emoon0108/academic-planner', action: 'Show sequence', actionDone: 'Stop sequence',
   },
   {
-    name: "Healthy Eaters",
-    tag: "Human-Centered Assistive System",
-    scope: "Public prototype",
-    status: "Low-stim mode stable",
-    summary:
-      "Defold/Lua prototype for autism-aware nutrition exposure with simulated smart-plate tracking, sensory modes, food challenges, tokenized games, and parent insights.",
-    signal: "Exposure Steps",
-    metric: "4",
-    pulse: "10 mini-games integrated",
-    tech: ["Lua", "Defold", "BLE Prototype", "UX Systems", "Persistence"],
-    icon: "Sparkles",
-    visual: "health",
-    accent: "cyan",
-    telemetry: [20, 24, 32, 38, 41, 45, 55, 57, 62, 70, 73, 82],
-    codeUrl: "https://github.com/emoon0108/HealthyEaters",
-    liveUrl: "https://emoon0108.github.io/HealthyEaters/"
+    id: 'ody', name: 'Ody', category: 'Lead Full-Stack Engineer', year: '2026–now', kind: 'store', color: '#ba6f4b', object: 'Restaurant',
+    summary: 'Consumer apps and restaurant management software.',
+    detail: 'I lead full-stack engineering and the U.S. team at Ody. My work includes the consumer social app redesign, menu translation, email campaigns, automated discounts, and multi-location analytics across six client applications and the backend.',
+    note: '187 PRs merged across six applications and the backend, May–August 2026.', tech: ['React', 'Expo', 'Hono', 'PostgreSQL'],
+    liveUrl: '/Ethan_Moon_Resume.pdf', linkLabel: 'Résumé', action: 'Open the doors', actionDone: 'Close the doors',
   },
   {
-    name: "AcademiQ",
-    tag: "Constraint-Aware Degree Planning",
-    scope: "Public source",
-    status: "43 tests passing",
-    summary:
-      "Full-stack degree planner that models prerequisites, compares alternate schedules, surfaces registration conflicts, and runs locally with a credential-free demo dataset.",
-    signal: "Verified Checks",
-    metric: "43",
-    pulse: "Credential-free demo mode",
-    tech: ["React", "tRPC", "Drizzle", "MySQL", "Framer Motion"],
-    icon: "DatabaseZap",
-    visual: "network",
-    accent: "violet",
-    telemetry: [33, 31, 39, 45, 44, 55, 52, 64, 61, 69, 74, 79],
-    codeUrl: "https://github.com/emoon0108/academic-planner"
-  }
-];
-
-export const experiences = [
-  {
-    title: "AI systems and product engineering",
-    body: "Building end-to-end intelligent products that connect data models, simulations, interactive interfaces, and decision support.",
-    icon: BrainCircuit
+    id: 'robotics', name: 'Robot autonomy', category: 'Undergraduate research · U-M', year: '2026–now', kind: 'drone', color: '#68714d', object: 'A morphable quadrotor',
+    summary: 'Vision-language navigation for morphable drones.',
+    detail: 'At Michigan’s Intelligent Robotics & Autonomy Laboratory, I investigate foundation models for onboard vision-language navigation and human–robot coordination on morphable drones, using hardware-in-the-loop testing before real flight.',
+    note: 'Ongoing research with Professor Vasileios Tzoumas.', tech: ['Foundation models', 'Robotics', 'Vision-language navigation'],
+    liveUrl: '/Ethan_Moon_Resume.pdf', linkLabel: 'Research background', action: 'Spin the rotors', actionDone: 'Stop the rotors',
   },
   {
-    title: "Digital twin and simulation research",
-    body: "Experimenting with computational twins across bioprinting, acoustics, sports, and instrument analysis using physics baselines plus learned residuals.",
-    icon: CircuitBoard
+    id: 'healthy-eaters', name: 'Healthy Eaters', category: 'Independent · Prototype', year: '2024–26', kind: 'plate', color: '#658059', object: 'Smart plate prototype',
+    summary: 'A nutrition app with gradual food exposure and a simulated smart plate.',
+    detail: 'A Lua/Defold prototype for gradual food exposure, with a simulated smart plate, low-stimulation settings, local progress tracking, and ten mini-games. Meal progress is stored locally and unlocks game rewards.',
+    note: 'The public app simulates the plate connection; real BLE integration is future work.', tech: ['Lua', 'Defold', 'Local persistence', 'Hardware prototyping'],
+    codeUrl: 'https://github.com/emoon0108/HealthyEaters', liveUrl: 'https://emoon0108.github.io/HealthyEaters/', linkLabel: 'Project page', action: 'Change portion', actionDone: 'Reset the plate',
   },
   {
-    title: "Realtime feedback systems",
-    body: "Designing systems that observe live signals, extract meaningful structure, and turn analysis into immediate coaching or operational feedback.",
-    icon: Radar
-  }
-];
-
-export const skillGroups = [
-  {
-    label: "AI + Modeling",
-    skills: ["Computer Vision", "Anomaly Detection", "Surrogate Models", "Feature Engineering", "Monte Carlo Simulation"]
+    id: 'referrals', name: 'Referral Intelligence', category: 'Analytics · Prototype', year: '2026', kind: 'funnel', color: '#64828b', object: 'Referral funnel',
+    summary: 'Referral funnels, cohort analysis, and executive reporting.',
+    detail: 'A browser-based dashboard with CSV import, funnel analysis, cohort segmentation, and unit-economics calculations. The executive report includes configurable metrics, planning targets, and exportable summaries.',
+    note: 'The live demo uses clearly labeled synthetic data. Uploaded CSVs stay in the browser.', tech: ['JavaScript', 'CSV', 'Analytics', 'Node tests'],
+    codeUrl: 'https://github.com/emoon0108/sportlingo-referral-dashboard', liveUrl: 'https://emoon0108.github.io/sportlingo-referral-dashboard/', linkLabel: 'Open dashboard', action: 'Release the marbles', actionDone: 'Pause the marbles',
   },
   {
-    label: "Simulation + Sensing",
-    skills: ["Digital Twins", "OpenFOAM", "CFD Workflows", "Audio DSP", "Geometry Processing"]
+    id: 'flight', name: 'Flight & orbits', category: 'Research · GVSU', year: '2025', kind: 'space', color: '#657b93', object: 'A satellite and an airfoil',
+    summary: 'Airfoil experiments and orbital dynamics research.',
+    detail: 'Two mentored research projects: I co-designed and 3D-printed airfoils for Arduino-instrumented wind tunnel experiments, and used Octave and NASA GMAT to investigate orbital transfers, rendezvous, and formation flying.',
+    note: 'Mentored research at Grand Valley State University, summer 2025.', tech: ['NASA GMAT', 'Octave', 'Arduino', 'CFD'],
+    liveUrl: 'https://www.linkedin.com/in/ethan-moon0108/', linkLabel: 'Research on LinkedIn', action: 'Start the orbit', actionDone: 'Pause the orbit',
   },
-  {
-    label: "Product Engineering",
-    skills: ["Next.js", "React Native", "TypeScript", "Python", "Full-Stack APIs"]
-  },
-  {
-    label: "Systems Taste",
-    skills: ["Research UX", "Telemetry Dashboards", "Motion Design", "Developer Tooling", "Human-Centered AI"]
-  }
 ];
 
 export const timeline = [
-  {
-    year: "2026",
-    title: "Computer Science, University of Michigan",
-    body: "Pursuing a B.S.E. in Computer Science at the College of Engineering after building a portfolio across AI, simulation, aerospace, bioprinting, and product engineering."
-  },
-  {
-    year: "Oct 2025 - Present",
-    title: "Bioprinting Researcher / Co-Author, Grand Valley State University",
-    body: "Co-authored and presented closed-loop bioprinting research at ASEE North Central; developed an OpenFOAM/interFoam CFD digital twin and real-time computer vision + sensor feedback pipeline for defect detection and adaptive control."
-  },
-  {
-    year: "Summer 2025",
-    title: "Aerospace Research: Hysteresis + Satellite Dynamics",
-    body: "Designed 3D-printed airfoil prototypes, ran Arduino-based wind tunnel experiments, analyzed CFD flow behavior, and simulated orbital transfers, rendezvous, and formation-flying algorithms with Octave and NASA GMAT."
-  },
-  {
-    year: "Jan 2025 - Present",
-    title: "WMU Design Build Fly Team",
-    body: "Collaborating with university engineering students to design, build, and test model aircraft for AIAA collegiate competitions."
-  },
-  {
-    year: "Mar 2024 - Present",
-    title: "Software Simulation Intern, Casual Simulations",
-    body: "Optimized rowing system simulations using XP exchange and Arduino technology; contributed to a rowing app sold to a high school rowing team."
-  },
-  {
-    year: "2024",
-    title: "Healthy Eaters: Smart Plate + Gamified Assistive App",
-    body: "Built an Arduino/ESP32 smart-plate prototype with load-cell sensing and a Lua/Defold app for gradual food exposure, reward loops, parent monitoring, and autism-aware nutrition support."
-  },
-  {
-    year: "2022 - Present",
-    title: "Founder, Helping Hands N.P.O.",
-    body: "Founded a nationwide volunteer soccer education club for underserved youth, recruited 10+ ECNL/MLS NEXT coaches, built the public website, and raised $3,000+ in donations."
-  }
+  {year: 'May 2026–present', title: 'Lead Full-Stack Engineer · Ody', body: 'Joined as an intern in May; now leading engineering and the U.S. team. Consumer experiences, merchant tools, APIs, and database design.'},
+  {year: 'Aug 2026–present', title: 'Undergraduate Researcher · University of Michigan', body: 'Vision-language navigation and human–robot coordination at the Intelligent Robotics & Autonomy Laboratory.'},
+  {year: 'Sep 2025–Sep 2026', title: 'Researcher & Co-Author · Grand Valley State University', body: 'Bioink-deposition simulation, computer vision, and a research platform for inspecting CFD results. ASEE conference paper and ongoing journal manuscripts.'},
+  {year: 'Summer 2025', title: 'Aerospace Research · Grand Valley State University', body: 'Airfoil prototypes and wind tunnel experiments; satellite relative motion and orbital dynamics in Octave and NASA GMAT.'},
 ];
 
-export const stats = [
-  { label: "System domains", value: "6+" },
-  { label: "Twin pipelines", value: "3" },
-  { label: "Telemetry-first products", value: "5" },
-  { label: "Stack range", value: "AI to UI" }
-];
-
-export const heroOrbit = [Cpu, Activity, ScanEye, Rocket];
+export const exhibits = [...projects.map(({id,name})=>({id,name})), {id:"about",name:"About me"}];
