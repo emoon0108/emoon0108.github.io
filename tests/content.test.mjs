@@ -22,6 +22,6 @@ test('professional contact and static reading content remain available',async()=
 test('published résumé is the exact user-supplied document',async()=>{
   const pdf=await readFile(new URL('../public/Ethan_Moon_Resume.pdf',import.meta.url));
   assert.equal(pdf.subarray(0,5).toString(),'%PDF-');
-  assert.equal(createHash('sha256').update(pdf).digest('hex'),'ac56e49fd517bc98dce67ebe6edfdcdff66dfe3a2c8dd1babc8fbf8ad7239dc4');
+  assert.equal(createHash('sha256').update(pdf).digest('hex'),'81eb9532f422b842e22ca80d8562029856c84bd980339917441ba11d08fb4a27');
   const generator=await read('scripts/build-career-documents.py');assert.match(generator,/PUBLIC = ROOT \/ "tmp" \/ "legacy-career-documents"/);
 });

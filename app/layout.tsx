@@ -24,11 +24,11 @@ const personJsonLd = {
     name: "University of Michigan"
   },
   knowsAbout: [
+    "Full-stack software engineering",
     "Applied artificial intelligence",
-    "Digital twins",
-    "Computational simulation",
-    "Realtime systems",
-    "Audio signal processing"
+    "Robotics",
+    "Computational fluid dynamics",
+    "Web performance"
   ]
 };
 
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://emoon0108.github.io"),
   title: "Ethan Moon — Software Engineer & Researcher",
   description:
-    "Ethan Moon’s portfolio. Computer science at Michigan, lead full-stack engineer at Ody, and robotics researcher. Explore software and research projects in a 3D soccer stadium.",
+    "Ethan Moon’s portfolio. Computer science at Michigan, Lead Engineer and Head of U.S. Team at Ody, and robotics researcher. Explore software and research projects in a 3D soccer stadium.",
   alternates: {
     canonical: "/"
   },

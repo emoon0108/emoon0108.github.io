@@ -29,6 +29,6 @@ The scene batches supporters into instanced meshes, caps rendering near 30 fps a
 
 Project descriptions were checked against the supplied résumé, GitHub repositories, and LinkedIn. Sources and visual references are recorded in [docs/design-notes.md](docs/design-notes.md).
 
-`public/Ethan_Moon_Resume.pdf` is the exact supplied September 2026 résumé. The legacy career-document generator writes drafts only to ignored `tmp/legacy-career-documents/`; it cannot overwrite the current résumé.
+`public/Ethan_Moon_Resume.pdf` is the exact supplied November 2026 résumé. The legacy career-document generator writes drafts only to ignored `tmp/legacy-career-documents/`; it cannot overwrite the current résumé.
 
 Original code is available under [MIT](LICENSE). Personal documents and photography are covered separately by [ASSET-LICENSE.md](ASSET-LICENSE.md).

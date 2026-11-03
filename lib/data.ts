@@ -10,15 +10,15 @@ export const projects: Project[] = [
   {
     id: 'nospoilers', name: 'NoSpoilers', category: 'Co-built · Live product', year: '2026', kind: 'cinema', color: '#a65235', object: 'Film projector',
     summary: 'Movie discovery, shared watchlists, and spoiler blocking.',
-    detail: 'I co-built a movie discovery platform with collaborative picks, Movie DNA profiles, watchlist syncing, and a browser extension that hides spoilers on-device. My work spans the database, APIs, and the screens people use.',
-    note: 'Launched to 80+ users. Built with a collaborator.', tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
+    detail: 'I co-built a spoiler-free movie discovery site with collaborative picks, Movie DNA profiles, and watchlist syncing. I single-handedly built the Chrome extension that hides spoilers across the web, plus an AI recap assistant that answers using only the scenes a viewer has already watched.',
+    note: 'Launched to 150+ users. I wrote 58 of its 61 merged pull requests.', tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
     codeUrl: 'https://github.com/BoatingToast/nospoilers', liveUrl: 'https://nospoilers.xyz', linkLabel: 'Visit NoSpoilers', action: 'Start projector', actionDone: 'Stop projector',
   },
   {
     id: 'bioprinting', name: 'Bioprinting', category: 'Research · GVSU', year: '2025–26', kind: 'printer', color: '#3d6d66', object: 'An extrusion bioprinter',
-    summary: 'Simulation and monitoring for extrusion bioprinting.',
-    detail: 'I build non-Newtonian, multiphase OpenFOAM models of bioink deposition and tools for inspecting the results. The research connects fluid simulation, machine vision, and sensor feedback in a closed-loop bioprinting system.',
-    note: '32 deposition cases. Co-author on a peer-reviewed ASEE conference paper.', tech: ['OpenFOAM', 'Python', 'ParaView', 'Computer vision'],
+    summary: 'Fluid simulation for bio-ink and food-ink 3D printing.',
+    detail: 'I ran 20 non-Newtonian, multiphase OpenFOAM simulations of thick bio-inks and food inks flowing through a 3D-printer nozzle, confirmed the results held at finer detail, and built a dashboard that lets the team explore results and trace where each number came from.',
+    note: '3 papers: first author of a NAMRC 55 submission, co-author of an ASEE 2026 paper, and a bioink paper in preparation.', tech: ['OpenFOAM', 'Python', 'ParaView', 'Docker'],
     liveUrl: '/Ethan_Moon_Resume.pdf', linkLabel: 'Research background', action: 'Start printer', actionDone: 'Pause printer',
   },
   {
@@ -32,21 +32,21 @@ export const projects: Project[] = [
     id: 'academiq', name: 'AcademiQ', category: 'Independent · Open source', year: '2026', kind: 'planner', color: '#4e627d', object: 'Eight connected semesters',
     summary: 'Degree planning with prerequisite and scheduling constraints.',
     detail: 'I built a planning engine that compares fastest, lowest-stress, and most-flexible paths through eight semesters. Prerequisites, credit limits, course availability, and internship terms constrain every plan, with deterministic fallbacks for AI features.',
-    note: '43 unit and integration tests. Includes a local, credential-free demo.', tech: ['React', 'tRPC', 'Drizzle', 'MySQL'],
+    note: '57 unit and integration tests. Includes a local, credential-free demo.', tech: ['React', 'tRPC', 'Drizzle', 'MySQL'],
     codeUrl: 'https://github.com/emoon0108/academic-planner', action: 'Show sequence', actionDone: 'Stop sequence',
   },
   {
-    id: 'ody', name: 'Ody', category: 'Lead Full-Stack Engineer', year: '2026–now', kind: 'store', color: '#ba6f4b', object: 'Restaurant',
-    summary: 'Consumer apps and restaurant management software.',
-    detail: 'I lead full-stack engineering and the U.S. team at Ody. My work includes the consumer social app redesign, menu translation, email campaigns, automated discounts, and multi-location analytics across six client applications and the backend.',
-    note: '187 PRs merged across six applications and the backend, May–August 2026.', tech: ['React', 'Expo', 'Hono', 'PostgreSQL'],
+    id: 'ody', name: 'Ody', category: 'Lead Engineer & Head of U.S. Team', year: '2026–now', kind: 'store', color: '#ba6f4b', object: 'Restaurant',
+    summary: 'Reservations, ordering, and loyalty software for restaurants.',
+    detail: 'Ody is an early-stage restaurant-tech startup. I was promoted from intern to lead in three months and now lead a 10+ person U.S. team alongside teams in France and China. I lead development of the AI website builder and shipped AI menu translation in 7 languages, automatic discounts, email marketing, and a customer app redesign.',
+    note: '414 merged pull requests (4th of 27 engineers). Restaurant pages load over 2× faster after my performance work.', tech: ['TypeScript', 'React', 'Expo', 'PostgreSQL'],
     liveUrl: '/Ethan_Moon_Resume.pdf', linkLabel: 'Résumé', action: 'Open the doors', actionDone: 'Close the doors',
   },
   {
     id: 'robotics', name: 'Robot autonomy', category: 'Undergraduate research · U-M', year: '2026–now', kind: 'drone', color: '#68714d', object: 'A morphable quadrotor',
-    summary: 'Vision-language navigation for morphable drones.',
-    detail: 'At Michigan’s Intelligent Robotics & Autonomy Laboratory, I investigate foundation models for onboard vision-language navigation and human–robot coordination on morphable drones, using hardware-in-the-loop testing before real flight.',
-    note: 'Ongoing research with Professor Vasileios Tzoumas.', tech: ['Foundation models', 'Robotics', 'Vision-language navigation'],
+    summary: 'Robotic-arm control for morphable aerial robots.',
+    detail: 'At Michigan’s Intelligent Robotics & Autonomy Laboratory, I build the simulation and control software for a six-joint robotic arm in the lab’s morphable-drone research: Isaac Sim/ROS 2 motion control that updates 60 times per second, demo recording and replay, emergency-stop safety, and a web dashboard.',
+    note: 'Ongoing research with Professor Vasileios Tzoumas. 5,000+ lines and 54% of the lab’s code.', tech: ['ROS 2', 'Isaac Sim', 'Python', 'Robotics'],
     liveUrl: '/Ethan_Moon_Resume.pdf', linkLabel: 'Research background', action: 'Spin the rotors', actionDone: 'Stop the rotors',
   },
   {
@@ -73,9 +73,9 @@ export const projects: Project[] = [
 ];
 
 export const timeline = [
-  {year: 'May 2026–present', title: 'Lead Full-Stack Engineer · Ody', body: 'Joined as an intern in May; now leading engineering and the U.S. team. Consumer experiences, merchant tools, APIs, and database design.'},
-  {year: 'Aug 2026–present', title: 'Undergraduate Researcher · University of Michigan', body: 'Vision-language navigation and human–robot coordination at the Intelligent Robotics & Autonomy Laboratory.'},
-  {year: 'Sep 2025–Sep 2026', title: 'Researcher & Co-Author · Grand Valley State University', body: 'Bioink-deposition simulation, computer vision, and a research platform for inspecting CFD results. ASEE conference paper and ongoing journal manuscripts.'},
+  {year: 'May 2026–present', title: 'Lead Engineer & Head of U.S. Team · Ody', body: 'Joined as an intern in May and promoted to lead within three months. Now leading the U.S. team alongside teams in France and China.'},
+  {year: 'Aug 2026–present', title: 'Undergraduate Researcher · University of Michigan', body: 'Simulation and control software for a robotic arm in the Intelligent Robotics & Autonomy Laboratory’s morphable-drone research.'},
+  {year: 'Sep 2025–Sep 2026', title: 'Researcher & Co-Author · Grand Valley State University', body: 'Bio-ink and food-ink flow simulation and a dashboard for exploring CFD results. First author of a NAMRC 55 submission; ASEE 2026 paper.'},
   {year: 'Summer 2025', title: 'Aerospace Research · Grand Valley State University', body: 'Airfoil prototypes and wind tunnel experiments; satellite relative motion and orbital dynamics in Octave and NASA GMAT.'},
 ];
 
